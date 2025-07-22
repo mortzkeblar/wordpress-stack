@@ -20,4 +20,4 @@
             password: "{{ mysql_password }}"
             priv: "wpdb.*:ALL"
 
-    - role: wordpress.custom_role
+    - role: wordpress-stack
