@@ -1,0 +1,17 @@
+<VirtualHost *:{{ vhost_port }}>
+  ServerAdmin webmaster@localhost
+  ServerName {{ vhost_name }}
+  ServerAlias www.{{ vhost_name }}
+  DocumentRoot {{ vhost_webroot }}/wordpress/
+  ErrorLog {{ apache_log_dir }}/error.log
+  CustomLog {{ apache_log_dir }}/access.log combined
+
+  <Directory {{ vhost_webroot }}/wordpress>
+    Options -Indexes
+  </Directory>
+
+  <IfModule mod_dir.c>
+    DirectoryIndex index.php index.html index.cgi index.pl  index.xhtml index.htm
+  </IfModule>
+
+</VirtualHost>

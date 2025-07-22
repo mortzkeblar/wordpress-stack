@@ -1,0 +1,19 @@
+---
+- name: Update APT cache
+  ansible.builtin.apt:
+    update_cache: yes
+
+- name: Install Apache packages with APT
+  ansible.builtin.apt:
+    name: "{{ apache_packages }}"
+    state: present
+
+- name: Install LAMP packages with APT
+  ansible.builtin.apt:
+    name: "{{ lamp_packages }}"
+    state: present
+
+- name: Install PHP modules with APT
+  ansible.builtin.apt:
+    name: "{{ php_modules }}"
+    state: present
