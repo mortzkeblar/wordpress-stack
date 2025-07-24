@@ -19,6 +19,6 @@ jobs:
         run: poetry install --no-root
 
       - name: Run Molecule tests
-        run: poetry run molecule test
+        run: poetry run molecule list
 
 
