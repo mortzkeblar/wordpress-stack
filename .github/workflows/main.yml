@@ -14,9 +14,9 @@ jobs:
         uses: abatilo/actions-poetry@v4
 
       - name: Install dependencies
-        run: poetry install --no-root
+        run: ~/.local/bin/poetry install --no-root
 
       - name: Run Molecule tests
-        run: poetry run molecule list
+        run: ~/.local/bin/poetry run molecule list
 
 
